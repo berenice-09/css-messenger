@@ -30,8 +30,8 @@
   background: var(--FAM-pluginBackground);
   position: fixed;
   height: 70vh; /* Réduit de 100% à 70% de la hauteur */
-  width: 400px; /* Largeur fixe réduite au lieu de 90% */
-  max-width: 400px; /* Largeur max réduite */
+  width: 700px; /* Largeur élargie à 700px */
+  max-width: 700px; /* Largeur max à 700px */
   right: 20px; /* Positionné à droite au lieu de left: 65px */
   bottom: 80px; /* Légèrement au-dessus du bouton */
   z-index: 99;
@@ -41,14 +41,14 @@
   transition-duration: 500ms;
   grid-template-columns: 100%;
   box-shadow: var(--FAM-shadowBox);
-  border-radius: 15px; /* Ajout de coins arrondis */
+  border: var(--border); /* Bordure ajoutée */
 }
 
 /* Fenetre fermée - MODIFIÉ pour se cacher à droite */
 #FAM[data-hidden="true"] {
   visibility: hidden;
   opacity: 0;
-  right: -400px; /* Se cache à droite au lieu de left: calc(-100% + 65px) */
+  right: -700px; /* Se cache à droite avec la nouvelle largeur */
 }
 
 /* ============================================ */
