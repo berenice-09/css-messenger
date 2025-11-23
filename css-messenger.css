@@ -40,7 +40,6 @@
   transition-property: right, opacity, visibility;
   transition-duration: 500ms;
   grid-template-columns: 100%;
-  box-shadow: var(--FAM-shadowBox);
   border: var(--border); /* Bordure ajoutée */
 }
 
@@ -113,15 +112,25 @@
   cursor: pointer;
 }
 
-/* Titre de la fenetre */
+/* Titre de la fenetre - PERSONNALISÉ sans image de fond */
 .FAM-maintitle {
-  text-align: left;
+  text-align: center;
   font-size: var(--FAM-titleSize);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   flex-grow: 99;
   margin: 0;
+  background: var(--FAM-pluginBackground);
+  padding: 10px;
+  border: var(--border);
+  border-radius: 2px;
+}
+
+/* Masquer l'image de fond du titre s'il y en a une */
+.FAM-maintitle:before,
+.FAM-maintitle:after {
+  display: none !important;
 }
 
 
@@ -137,8 +146,9 @@
   grid-template-rows: 1fr max-content;
   overflow: auto;
   background: var(--FAM-chatBackground);
-  border-radius: 10px 10px 0 0;
-  margin: 10px 15px 0 15px;
+  border-radius: 2px;
+  border: var(--border);
+  margin: 10px 15px 15px 15px; /* Ajout d'une marge en bas pour le gap */
 }
 
 /* Conteneur discussion */
@@ -1218,7 +1228,8 @@ blockquote.FAM-codebox > div {
 
 .FAM-tab {
   background: var(--FAM-chatBackground);
-  border-radius: 5px;
+  border-radius: 2px;
+  border: var(--border);
   position: relative;
   display: inline-block;
   align-items: center;
